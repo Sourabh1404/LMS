@@ -25,7 +25,7 @@ function SearchBar({ onSearch }) {
 
   const onSuggestionsFetchRequested = async ({ value }) => {
     try {
-      const response = await fetch(`http://localhost:3001/api/books/search/${value}`);
+      const response = await fetch(`https://lms-1afm.onrender.com/api/books/search/${value}`);
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
@@ -55,7 +55,7 @@ function SearchBar({ onSearch }) {
   const onEnterPress = async (e) => {
     if (e.key === 'Enter') {
       try {
-        const response = await fetch(`http://localhost:3001/api/books/search/${value}`);
+        const response = await fetch(`/api/books/search/${value}`);
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }

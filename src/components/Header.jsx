@@ -8,7 +8,7 @@ const Header = () => {
 
   useEffect(() => {
     // Fetch data from your API
-    fetch('http://localhost:3001/api/books') // Replace with your API URL
+    fetch('https://lms-1afm.onrender.com/api/books') // Replace with your API URL
       .then((response) => response.json())
       .then((data) => setBooks(data))
       .catch((error) => console.error('Error fetching data:', error));

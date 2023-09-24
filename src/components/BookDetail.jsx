@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-
+// https://lms-1afm.onrender.com/
 const BookDetail = ({ match }) => {
     const { id } = useParams();
     const [book, setBook] = useState(null);
 
     useEffect(() => {
         // Fetch book details using the bookId
-        fetch(`http://localhost:3001/api/books/book/${id}`)
+        fetch(`https://lms-1afm.onrender.com/api/books/book/${id}`)
             .then((response) => response.json())
             .then((data) => setBook(data))
             .catch((error) => console.error('Error fetching book details:', error));
