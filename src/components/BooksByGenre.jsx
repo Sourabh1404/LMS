@@ -5,7 +5,7 @@ function BooksByGenre({ genre }) {
   const [books, setBooks] = useState([]);
 
   useEffect(() => {
-    fetch(`https://lms-1afm.onrender.com/api/books/${genre}`)
+    fetch(`https://lmss-g4ph.onrender.com/api/books/${genre}`)
       .then((response) => response.json())
       .then((data) => setBooks(data))
       .catch((error) => console.error('Error fetching books:', error));

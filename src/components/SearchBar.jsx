@@ -25,7 +25,7 @@ function SearchBar({ onSearch }) {
 
   const onSuggestionsFetchRequested = async ({ value }) => {
     try {
-      const response = await fetch(`https://lms-1afm.onrender.com/api/books/search/${value}`);
+      const response = await fetch(`https://lmss-g4ph.onrender.com/api/books/search/${value}`);
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }

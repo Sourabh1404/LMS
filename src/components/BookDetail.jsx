@@ -7,7 +7,7 @@ const BookDetail = ({ match }) => {
 
     useEffect(() => {
         // Fetch book details using the bookId
-        fetch(`https://lms-1afm.onrender.com/api/books/book/${id}`)
+        fetch(`https://lmss-g4ph.onrender.com/api/books/book/${id}`)
             .then((response) => response.json())
             .then((data) => setBook(data))
             .catch((error) => console.error('Error fetching book details:', error));
