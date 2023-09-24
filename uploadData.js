@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 const Book = require('./book'); // Import the Book model
 const data = require('./data.json'); // Replace with your JSON data file
-
+require('dotenv').config();
 async function uploadData() {
   try {
-    await mongoose.connect('mongodb+srv://sourabh99541:9707748811@cluster0.acr65m8.mongodb.net/', {
+    await mongoose.connect(process.env.MONGO_URL, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
